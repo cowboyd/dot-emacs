@@ -36,7 +36,7 @@
 (define-key projectile-mode-map (kbd "s-g") 'projectile-ag)
 
 (add-hook 'prog-mode-hook
-          (lambda () (local-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)))
+          (lambda () (local-set-key (kbd "s-/") 'comment-or-uncomment-region)))
 
 
 ;; make sure that handlebars templates load in web-mode
@@ -67,7 +67,7 @@
 (add-hook 'enh-ruby-mode-hook
           (lambda() (yas-activate-extra-mode 'ruby-mode)))
 (add-hook 'enh-ruby-mode-hook
-          (lambda () (local-set-key (kbd "C-c C-c") 'comment-or-uncomment-region)))
+          (lambda () (local-set-key (kbd "s-/") 'comment-or-uncomment-region)))
 
 
 
@@ -116,3 +116,13 @@
 (require 'js2-refactor)
 ;; JavaScript refactorings all start with C-c C-r (for refactor!)
 (js2r-add-keybindings-with-prefix "C-c C-r")
+
+(global-set-key (kbd "C-z") 'undo)
+(global-set-key (kbd "s-f") 'projectile-find-file)
+
+(global-set-key (kbd "s-d") 'projectile-find-dir)
+
+
+;; perspective
+(persp-mode)
+(require 'persp-projectile)
