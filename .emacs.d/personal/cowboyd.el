@@ -63,9 +63,11 @@
 ;; drag stuff rules!
 (prelude-require-package 'drag-stuff)
 (drag-stuff-global-mode)
-
-
-
+;; this enables the dragstuff keys in terminal mode
+(progn (define-key input-decode-map "\e[1;9A" [M-up])
+       (define-key input-decode-map "\e[1;9B" [M-down])
+       (define-key input-decode-map "\e[1;9C" [M-right])
+       (define-key input-decode-map "\e[1;9D" [M-left]))
 
 ;; Twitter
 (setq twittering-icon-mode t)
@@ -93,7 +95,8 @@
 ;; Cats!
 (when window-system
   (prelude-require-package 'nyan-mode)
-  (nyan-mode))
+  (nyan-mode)
+  (server-start))
 
 ;;setup discover
 
