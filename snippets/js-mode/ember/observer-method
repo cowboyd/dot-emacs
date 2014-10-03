@@ -1,7 +1,7 @@
-# -*- mode: snippet -*-
-# name: Ember Observer Method
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: obs
 # key: obs
 # --
-$1: function() {
+$1: Ember.observer('$2', function() {
 $0
-}.observes("$2")
+})${3:,}

@@ -35,9 +35,7 @@
 ;; make the default search use Ag
 (define-key projectile-mode-map (kbd "s-g") 'projectile-ag)
 
-(add-hook 'prog-mode-hook
-          (lambda () (local-set-key (kbd "s-/") 'comment-or-uncomment-region)))
-
+(define-key prelude-mode-map (kbd "s-/") 'comment-or-uncomment-region)
 
 ;; make sure that handlebars templates load in web-mode
 (require 'web-mode)
