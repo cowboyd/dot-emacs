@@ -115,6 +115,7 @@
 (global-set-key (kbd "s-d") 'projectile-find-dir)
 
 
+(menu-bar-mode -1)
 ;; perspective
 ;;(persp-mode)
 ;;(require 'persp-projectile)
