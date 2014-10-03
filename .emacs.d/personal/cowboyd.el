@@ -1,17 +1,16 @@
 ;;(disable-theme 'zenburn)
+(prelude-require-packages '(frame-cmds frame-fns))
 (global-set-key (kbd "<s-return>") 'maximize-frame)
 
-(add-hook 'coffee-mode-hook
-          (lambda () (local-set-key (kbd "H-r") 'coffee-compile-buffer)))
-
 ;; YAS snippets everywhere bro.
+(prelude-require-package 'yasnippet)
 (yas-global-mode)
 
 ;; use the company-mode
-(require 'company)
-(add-hook 'after-init-hook 'global-company-mode)
-(push 'company-robe company-backends)
-(global-set-key (kbd "<C-s-268632064>") 'company-complete)
+;;(prelude-require-package 'company)
+;;(add-hook 'after-init-hook 'global-company-mode)
+;;(push 'company-robe company-backends)
+;;(global-set-key (kbd "<C-s-268632064>") 'company-complete)
 
 ;; Enable whitespace mode for code
 (add-hook 'prog-mode-hook 'prelude-enable-whitespace)
@@ -28,7 +27,7 @@
 (add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
 ;; let's add support for multiple cursors
-(require 'multiple-cursors)
+(prelude-require-package 'multiple-cursors)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 
@@ -57,26 +56,16 @@
 ;; smart parens configuration
 (require 'smartparens-config)
 (smartparens-global-mode)
-
-;; drag stuff rules!
-(drag-stuff-global-mode)
-
-;; I use enh-ruby-mode and not ruby mode, but I gotta have my snippets and my comment-or-uncomment!
-(add-hook 'enh-ruby-mode-hook
-          (lambda() (yas-activate-extra-mode 'ruby-mode)))
-(add-hook 'enh-ruby-mode-hook
-          (lambda () (local-set-key (kbd "s-/") 'comment-or-uncomment-region)))
-
-
-
-
 ;; Disable smartparens-mode when using multiple cursors. they don't play well together
+(require 'multiple-cursors)
 (add-to-list 'mc/unsupported-minor-modes 'smartparens-mode)
 
+;; drag stuff rules!
+(prelude-require-package 'drag-stuff)
+(drag-stuff-global-mode)
 
-;; Yay autocomplete
-(require 'auto-complete-config)
-(add-hook 'enh-ruby-mode-hook `auto-complete-mode)
+
+
 
 ;; Twitter
 (setq twittering-icon-mode t)
@@ -102,16 +91,18 @@
             (setq show-trailing-whitespace nil)))
 
 ;; Cats!
-(nyan-mode)
+(when window-system
+  (prelude-require-package 'nyan-mode)
+  (nyan-mode))
 
 ;;setup discover
 
-(require 'discover)
+(prelude-require-package 'discover)
 (global-discover-mode 1)
 
 ;; Javascript settings
+(prelude-require-package 'js2-refactor)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(require 'js2-refactor)
 ;; JavaScript refactorings all start with C-c C-r (for refactor!)
 (js2r-add-keybindings-with-prefix "C-c C-r")
 
@@ -122,5 +113,5 @@
 
 
 ;; perspective
-(persp-mode)
-(require 'persp-projectile)
+;;(persp-mode)
+;;(require 'persp-projectile)
