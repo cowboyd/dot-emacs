@@ -92,14 +92,16 @@
           (lambda ()
             (setq show-trailing-whitespace nil)))
 
-;; Cats!
+;; this stuff only loads when not in the terminal
 (when window-system
+  ;; Cats!
   (prelude-require-package 'nyan-mode)
   (nyan-mode)
+
+  ;; all your emacs connect to this.
   (server-start))
 
 ;;setup discover
-
 (prelude-require-package 'discover)
 (global-discover-mode 1)
 
@@ -111,11 +113,7 @@
 
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "s-f") 'projectile-find-file)
-
 (global-set-key (kbd "s-d") 'projectile-find-dir)
 
 
 (menu-bar-mode -1)
-;; perspective
-;;(persp-mode)
-;;(require 'persp-projectile)

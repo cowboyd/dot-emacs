@@ -2,6 +2,7 @@
 !.gitignore.d
 !.gitignore.d/emacs
 !.emacs.d/*
+!.emacs.d/personal/custom.el
 .emacs.d/*~
 .emacs.d/*.elc
 .emacs.d/auto-save-list
@@ -15,7 +16,6 @@
 .emacs.d/url
 .emacs.d/ede-projects.el
 .emacs.d/.DS_Store
-.emacs.d/custom.el
 .emacs.d/places
 .emacs.d/.smex-items
 .emacs.d/savefile/
