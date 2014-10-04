@@ -1,5 +1,5 @@
 ;;(disable-theme 'zenburn)
-(prelude-require-packages '(frame-cmds frame-fns))
+(prelude-require-packages '(frame-fns frame-cmds))
 (global-set-key (kbd "<s-return>") 'maximize-frame)
 
 ;; YAS snippets everywhere bro.
