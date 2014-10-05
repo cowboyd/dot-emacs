@@ -96,10 +96,7 @@
 (when window-system
   ;; Cats!
   (prelude-require-package 'nyan-mode)
-  (nyan-mode)
-
-  ;; all your emacs connect to this.
-  (server-start))
+  (nyan-mode))
 
 ;;setup discover
 (prelude-require-package 'discover)
