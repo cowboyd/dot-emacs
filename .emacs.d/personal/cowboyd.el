@@ -35,6 +35,8 @@
 (define-key projectile-mode-map (kbd "s-g") 'projectile-ag)
 
 (define-key prelude-mode-map (kbd "s-/") 'comment-or-uncomment-region)
+(define-key prelude-mode-map (kbd "C-c /") 'comment-or-uncomment-region)
+
 
 ;; make sure that handlebars templates load in web-mode
 (require 'web-mode)
