@@ -113,3 +113,5 @@
 (global-set-key (kbd "C-z") 'undo)
 (global-set-key (kbd "s-f") 'projectile-find-file)
 (global-set-key (kbd "s-d") 'projectile-find-dir)
+
+(prelude-require-packages '(bundler rspec-mode))
