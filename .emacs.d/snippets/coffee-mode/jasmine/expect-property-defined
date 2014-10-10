@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: Expect Property toBeDefined
-# key: epd
-# --
-expect($1.get("$2")).toBeDefined()

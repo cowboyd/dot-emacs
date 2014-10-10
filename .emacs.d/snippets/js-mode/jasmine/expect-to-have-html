@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: expect toHaveHtml
-# key: ehtml
-# --
-expect($1).toHaveHtml($2)$0

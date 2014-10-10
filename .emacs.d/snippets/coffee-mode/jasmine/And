@@ -1,6 +1,0 @@
-# -*- mode: snippet -*-
-# name: And
-# key: A
-# --
-And -> $1
-$0

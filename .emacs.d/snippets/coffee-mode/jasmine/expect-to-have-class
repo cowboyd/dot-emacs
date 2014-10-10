@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: expect toHaveClass
-# key: ehc
-# --
-expect($1).toHaveClass '$2'$0

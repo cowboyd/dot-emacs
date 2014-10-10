@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: expect not.toHaveBeenCalled
-# key: enc
-# --
-expect($1).not.toHaveBeenCalled()$0
