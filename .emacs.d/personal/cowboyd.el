@@ -106,7 +106,6 @@
 
 ;; Javascript settings
 (prelude-require-package 'js2-refactor)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 ;; JavaScript refactorings all start with C-c C-r (for refactor!)
 (js2r-add-keybindings-with-prefix "C-c C-r")
 
@@ -114,4 +113,4 @@
 (global-set-key (kbd "s-f") 'projectile-find-file)
 (global-set-key (kbd "s-d") 'projectile-find-dir)
 
-(prelude-require-packages '(bundler rspec-mode mocha-snippets))
+(prelude-require-packages '(bundler rspec-mode mocha-snippets pcre2el))
