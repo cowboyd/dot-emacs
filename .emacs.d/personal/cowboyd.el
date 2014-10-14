@@ -113,4 +113,8 @@
 (global-set-key (kbd "s-f") 'projectile-find-file)
 (global-set-key (kbd "s-d") 'projectile-find-dir)
 
-(prelude-require-packages '(bundler rspec-mode mocha-snippets pcre2el))
+;; Rails
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
+
+
+(prelude-require-packages '(bundler rspec-mode mocha-snippets pcre2el projectile-rails))
