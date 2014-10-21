@@ -1,3 +1,5 @@
+(prelude-require-packages '(bundler rspec-mode mocha-snippets pcre2el projectile-rails))
+
 ;;(disable-theme 'zenburn)
 (prelude-require-packages '(frame-fns frame-cmds))
 (global-set-key (kbd "<s-return>") 'maximize-frame)
@@ -113,8 +115,7 @@
 (global-set-key (kbd "s-f") 'projectile-find-file)
 (global-set-key (kbd "s-d") 'projectile-find-dir)
 
+
+
 ;; Rails
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
-
-
-(prelude-require-packages '(bundler rspec-mode mocha-snippets pcre2el projectile-rails))
