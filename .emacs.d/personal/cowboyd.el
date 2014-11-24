@@ -1,4 +1,4 @@
-(prelude-require-packages '(bundler rspec-mode mocha-snippets pcre2el projectile-rails))
+(prelude-require-packages '(bundler rspec-mode mocha-snippets pcre2el json-mode))
 
 ;;(disable-theme 'zenburn)
 (prelude-require-packages '(frame-fns frame-cmds))
