@@ -60,6 +60,7 @@
 ;; smart parens configuration
 (require 'smartparens-config)
 (smartparens-global-mode)
+(customize-set-variable 'sp-autoescape-string-quote nil)
 ;; Disable smartparens-mode when using multiple cursors. they don't play well together
 (require 'multiple-cursors)
 (add-to-list 'mc/unsupported-minor-modes 'smartparens-mode)
