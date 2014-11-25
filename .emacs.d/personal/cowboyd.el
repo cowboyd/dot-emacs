@@ -116,7 +116,5 @@
 (global-set-key (kbd "s-f") 'projectile-find-file)
 (global-set-key (kbd "s-d") 'projectile-find-dir)
 
-
-
-;; Rails
-(add-hook 'projectile-mode-hook 'projectile-rails-on)
+(provide 'cowboyd)
+;;; cowboyd.el ends here
