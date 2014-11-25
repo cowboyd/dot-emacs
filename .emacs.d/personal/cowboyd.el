@@ -116,5 +116,8 @@
 (global-set-key (kbd "s-f") 'projectile-find-file)
 (global-set-key (kbd "s-d") 'projectile-find-dir)
 
+(prelude-require-package 'ido-vertical-mode)
+(ido-vertical-mode)
+
 (provide 'cowboyd)
 ;;; cowboyd.el ends here
