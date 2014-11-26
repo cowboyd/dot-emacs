@@ -116,8 +116,12 @@
 (global-set-key (kbd "s-f") 'projectile-find-file)
 (global-set-key (kbd "s-d") 'projectile-find-dir)
 
+;; make ido choices appear vertically.
 (prelude-require-package 'ido-vertical-mode)
 (ido-vertical-mode)
+
+;; Line numbers always on in prog-mode
+(add-hook 'prog-mode-hook 'linum-mode)
 
 (provide 'cowboyd)
 ;;; cowboyd.el ends here
