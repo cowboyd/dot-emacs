@@ -3,6 +3,7 @@
 !.gitignore.d/emacs
 !.emacs.d/*
 !.emacs.d/personal/custom.el
+!.emacs.d/frontside/frontside.el
 .emacs.d/*~
 .emacs.d/*.elc
 .emacs.d/auto-save-list

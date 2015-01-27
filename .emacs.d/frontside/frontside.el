@@ -126,5 +126,5 @@
 ;; Line numbers always on in prog-mode
 (add-hook 'prog-mode-hook 'linum-mode)
 
-(provide 'cowboyd)
-;;; cowboyd.el ends here
+(provide 'frontside)
+;;; frontside.el ends here

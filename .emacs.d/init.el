@@ -116,6 +116,11 @@ by Prelude.")
 (when (file-exists-p prelude-modules-file)
   (load prelude-modules-file))
 
+;;; the frontside configuration
+(let ((frontside-dir (expand-file-name "frontside/" user-emacs-directory)))
+  (message "Loading Frontside configuration files in %s..." frontside-dir)
+  (mapc 'load (directory-files frontside-dir 't "^[^#.].*el$")))
+
 ;; config changes made through the customize UI will be store here
 (setq custom-file (expand-file-name "custom.el" prelude-personal-dir))
 
